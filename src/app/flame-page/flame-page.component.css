@@ -1,0 +1,19 @@
+.form-area{
+    margin-top: 20%;
+}
+
+button{
+    width: 250px;
+    background-color: orangered !important;
+}
+
+
+
+mat-form-field{
+    width: 250px !important;
+    
+}
+
+.output-area{
+    margin-top: 150px;
+}

@@ -1,0 +1,33 @@
+<div class="form-area" fxLayoutAlign="center">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <div class="textBox">
+            <mat-form-field appearance="outline">
+                <mat-label>Partner1</mat-label>
+                <input type="text" name="partner1" matInput #partner1 ngModel >
+            </mat-form-field>
+        </div>
+
+      <div class="textBox">
+        <mat-form-field appearance="outline">
+            <mat-label>Partner2</mat-label>
+            <input type="text" name="partner2" matInput #partner2 ngModel>
+        </mat-form-field>
+      </div>
+      <button type="submit" mat-button (click)="play()">Check</button>
+    </form>
+</div>
+
+<div class="output-area" fxLayout="row" fxLayoutAlign="center space-between" >
+   <div [ngSwitch]="result">
+    <img *ngSwitchCase="siblings" src="../../assets/brothers.png" alt="" width="100px" height="100px">
+    <img  *ngSwitchCase="affection" src="../../assets/dating.png" alt=""  width="100px" height="100px">
+    <img *ngSwitchCase="love" src="../../assets/siblings.png" alt=""  width="100px" height="100px">
+    <img *ngSwitchCase="friends" src="../../assets/friends.png" alt=""  width="100px" height="100px">
+    <img *ngSwitchCase="enemy" src="../../assets/versus.png" alt=""  width="100px" height="100px">
+    <img *ngSwitchCase="marriage" src="../../assets/wedding.png" alt=""  width="100px" height="100px">
+   </div>
+</div>
+<div fxLayoutAlign="center">
+    <h2>{{result}}</h2>
+    <h2>{{"31/12/2023"|stringToDate}}</h2>
+</div>
